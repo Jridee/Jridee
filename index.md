@@ -7,6 +7,13 @@ After setting up a NAT network in Virtual Box so my vm's could communicate with 
 ![Branching](Screenshot 2025-10-20 200202.png)
 
 Once I installed sysmon and Splunk Universal Forwarder on the Windows 10 target VM and Windows Server 2022 AD VM, it was time to create an inputs.conf file in the local directory of the Universal Forwarder to send Application, Security, System and Sysmon logs to the Splunk server, pointing to the index "endpoint" as well as creating an endpoint index within Splunk and configuring a receving point, which is 9997 by default: 
+
 ![Branching](input.conf_screenshot.png)
 
 ![Branching](Splunkscreenshot.png)
+
+To put on the finishing touches before we can begin attacking the target machine, I installed Active Directory Domain Services on the Windows Server 2022 VM, promoted the server to a DC, created a new forest with domain name "ADPROJECT", created some OU's like IT and HR along with some user accounts Jerry Smith and Terry Smith, then finally joining the Windows 10 target machine to the AD domain
+
+![Branching](ADscreenshot.png)
+
+
