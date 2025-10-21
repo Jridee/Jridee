@@ -16,4 +16,8 @@ To put on the finishing touches before we can begin attacking the target machine
 
 ![Branching](ADscreenshot.png)
 
+Now that we have all the pieces in place, we can finally begin launching attacks on the Windows 10 target machine. There are many brute force tools you can use, I decided to use hydra with this command: hydra -l tsmith -P passwords.txt rdp://192.168.10.100/32, indicating we want to brute force attempt via RDP to account jsmith using passwords listed in the passwords.txt file.
 
+![Branching](Splunkresults.png)
+
+As you can see at the very top, the event code for this specific alert was 4625, which indicates a failed log in attempt to tsmith's account, since I did not include their password in the passwords.txt file. Now that we can officially see the telemetry of the attack, the lab is complete!
