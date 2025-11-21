@@ -1,6 +1,6 @@
 # Active Directory Project
 
-[SOAR Project](./SOARProject.html)
+[SOAR Project](./SOARProject.md)
 
 In this project, I used Virtual Box to setup an AD environment inside a Windows Server 2022 VM, Configured a target Windows 10 machine and Kali Linux VM, and a Splunk instance for ingesting events and analyzing telemetry. The initial draw up, with all VM's and installed software, is depicted below:
 ![Branching](ADProjectDiagram.png)
